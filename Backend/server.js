@@ -5,7 +5,7 @@ const cheerio = require('cheerio');
 const axios = require('axios');
 const openAI = require("openai");
 
-
+dotenv.config();
 
 const PORT = 3000;
 
