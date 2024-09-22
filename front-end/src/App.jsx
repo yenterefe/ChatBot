@@ -9,6 +9,7 @@ function App() {
   async function handleSubmission() {
     try {
       const response = await axios.post("http://localhost:3000/ask", { question: userInput });
+      setUserInput('');
     } catch (error) {
       console.error("Error submitting question:", error);
     }
