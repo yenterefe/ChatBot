@@ -42,7 +42,7 @@ const openai = new openAI({
 app.post("/ask", async (request, response) => {
     try {
         const question = await request.body.question;
-        response.json(question);
+        //response.json(question);
 
         const scrapedWebsite = await scrapeWebsite(yenURL);
         const completion = await openai.chat.completions.create({
@@ -55,6 +55,7 @@ app.post("/ask", async (request, response) => {
         console.log("The question is: " + question);
         const answer = completion.choices[0].message.content;
         console.log("the answer is: " + answer);
+        response.json({ answer: answer });
     }
 
     catch (error) {
