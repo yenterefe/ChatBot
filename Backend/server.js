@@ -52,9 +52,9 @@ app.post("/ask", async (request, response) => {
             ],
             max_tokens: 400
         });
-        console.log("my question is " + question);
-        const answer = completion.choices[0].message;
-        console.log(answer);
+        console.log("The question is: " + question);
+        const answer = completion.choices[0].message.content;
+        console.log("the answer is: " + answer);
     }
 
     catch (error) {
