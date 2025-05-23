@@ -14,7 +14,7 @@
 
 **How It Works**
 
-- Scrapes my personal website (yenenehgirma.com) using Cheerio to extract content from <h3> tags.
+- Scrapes my personal website (yenenehgirma.com) using Cheerio to extract content from h3 tags.
 
 - Sends both the scraped content and a user-submitted question to the OpenAI API.
 
